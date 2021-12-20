@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    background:linear-gradient(to right,violet,rgb(0, 119, 128),rgb(238, 46, 222)) ;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+main h1{
+    color: white;
+    margin-bottom: 5vh;
+}
+.box{
+    height: 50vh;
+    width: 60%;
+    /* border: 2px solid white; */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 20px 10px 20px 10px;
+    background: linear-gradient(to bottom, red ,white,green);
+}
+.quote{
+    height: 20vh;
+    width: 98%;
+    border: 2px solid black;
+}
+.author{
+    height: 10vh;
+    width: 80%;
+    border: 2px solid black;
+}
+.btn{
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right,black,red,green,blue,yellow);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor:pointer;
+}
