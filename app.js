@@ -1,21 +1,25 @@
+// variable declare kare hai 
 let quotes = document.querySelector(".quote");
-        let authors = document.querySelector(".author");
-        let nQuotes = document.getElementById("nquotes");
-        realData="";
-        const getNewQuotes = () => {
-            let rnum = Math.floor(Math.random() * 10);
-            quoteData = realData[rnum];
-            quotes.innerText = `${quoteData.text}`;
-            authors.innerText = `${quoteData.author}`;
-        };
-        const getQuotes = async () => {
-            const api = "https://type.fit/api/quotes";
-            try {
-                let data = await fetch(api);
-                realData = await data.json();
-                getNewQuotes();
-            } catch (error) { }
-        };
-        getQuotes();
+let authors = document.querySelector(".author");
+let nQuotes = document.getElementById("nquotes");
+realData = "";
 
-        nQuotes.addEventListener("click", getNewQuotes);
+const getNewQuotes = () => {
+  let rnum = Math.floor(Math.random() * 10);
+  quoteData = realData[rnum];
+  quotes.innerText = `${quoteData.text}`;
+  authors.innerText = `${quoteData.author}`;
+};
+const getQuotes = async () => {
+  const api = "https://type.fit/api/quotes";
+  try {
+    let data = await fetch(api);
+    realData = await data.json();
+    getNewQuotes();
+  } catch (error) {}
+};
+getQuotes();
+
+
+// yaha pe hamne button pe event listener lagaya hai 
+nQuotes.addEventListener("click", getNewQuotes);
